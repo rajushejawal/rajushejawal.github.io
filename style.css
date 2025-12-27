@@ -306,3 +306,37 @@ footer {
         text-decoration: none;
     }
 }
+/* ==================================================
+   Career Timeline
+   ================================================== */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    position: relative;
+}
+
+.timeline-item {
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.timeline-period {
+    display: block;
+    font-size: 0.85rem;
+    color: #2563eb;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.timeline-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.timeline-item p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
