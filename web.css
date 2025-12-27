@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 6px;
 }
 
@@ -109,44 +109,76 @@ nav a:hover {
 }
 
 /* ==================================================
-   Executive Summary (Hero)
+   Hero / Executive Summary
    ================================================== */
 .hero {
-    padding: 96px 0 72px 0;
+    padding: 96px 0 72px;
     background-color: #f9fafb;
 }
 
 .hero h1 {
-    max-width: 700px;
+    max-width: 720px;
 }
 
 .hero p {
-    max-width: 720px;
+    max-width: 760px;
     font-size: 1.05rem;
     color: #4b5563;
 }
 
 .hero .meta {
-    margin-top: 20px;
+    margin-top: 18px;
     font-size: 0.95rem;
     color: #6b7280;
 }
 
 /* ==================================================
-   Experience / Leadership Blocks
+   Download Resume Button
+   ================================================== */
+.download-btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 26px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #2563eb;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* ==================================================
+   Competencies / Skills Tags
+   ================================================== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    background-color: #eef2ff;
+    color: #1e3a8a;
+}
+
+/* ==================================================
+   Experience / Leadership Roles
    ================================================== */
 .role {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
 }
 
 .role-header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.role-header h3 {
-    font-weight: 600;
 }
 
 .role-header span {
@@ -165,56 +197,36 @@ nav a:hover {
 }
 
 /* ==================================================
-   Key Achievements
+   Awards & Recognitions
    ================================================== */
-.achievements {
+.awards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
 }
 
-.achievement-card {
-    padding: 24px;
+.award-card {
+    padding: 22px;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
     background-color: #ffffff;
 }
 
-.achievement-card h3 {
+.award-card h3 {
     font-size: 1.05rem;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-.achievement-card p {
-    font-size: 0.95rem;
-}
-
-/* ==================================================
-   Skills & Expertise
-   ================================================== */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.skill {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-    border-radius: 20px;
-    background-color: #eef2ff;
-    color: #1e3a8a;
+.award-card span {
+    font-size: 0.9rem;
+    color: #6b7280;
 }
 
 /* ==================================================
-   Education / Certifications
+   Education
    ================================================== */
 .education-item {
-    margin-bottom: 20px;
-}
-
-.education-item h3 {
-    font-size: 1.05rem;
+    margin-bottom: 22px;
 }
 
 .education-item span {
@@ -227,10 +239,6 @@ nav a:hover {
    ================================================== */
 .contact {
     background-color: #f9fafb;
-}
-
-.contact p {
-    font-size: 1rem;
 }
 
 .contact a {
@@ -272,5 +280,29 @@ footer {
     .header-wrapper {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* ==================================================
+   Print Mode (Resume Export)
+   ================================================== */
+@media print {
+    header, nav, footer, .download-btn {
+        display: none;
+    }
+
+    body {
+        font-size: 12px;
+        color: #000000;
+    }
+
+    .section {
+        padding: 36px 0;
+        border: none;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
     }
 }
